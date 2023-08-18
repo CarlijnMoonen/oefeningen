@@ -6,9 +6,7 @@ let persoon = {
     Mailadres: "test@info.be"
 };
 
-console.log("Mijn naam is: " + persoon.Voornaam + " en mijn achternaam is: " + persoon.Naam + "." +
-    " Ik ben geboren op: " + persoon.Geboortedatum + "." +
-    " Mijn telefoonnummer is: " + persoon.Telefoonnummer + " en mijn mailadres is: " + persoon.Mailadres + ".");
+console.log(persoon);
 
 function tabelVullen(){
     let table = document.getElementById('gegevensTabel');
