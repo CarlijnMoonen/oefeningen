@@ -1,4 +1,4 @@
-let account = {
+const account = {
     landcode: "BE",
     banknummer: "76",
     uniekNummer: "0012557909",
