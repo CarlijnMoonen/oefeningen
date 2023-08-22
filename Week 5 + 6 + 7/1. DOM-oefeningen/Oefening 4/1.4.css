@@ -1,0 +1,25 @@
+#label{
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+}
+
+#getal{
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+}
+
+#buttonTeken{
+    display: inline-block;
+    margin: 10px;
+    width: 120px;
+    text-align: left;
+}
+
+#divPyramide{
+    display: inline-block;
+    margin: 10px;
+    width: auto;
+    height: auto;
+}

@@ -1,0 +1,23 @@
+.inputvelden{
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+}
+
+.labels{
+    display: inline-block;
+    margin: 10px;
+    width: 130px;
+}
+
+#genereer{
+    display: inline-block;
+    margin: 10px;
+    width: 130px;
+}
+
+#welkomstBericht{
+    display: inline-block;
+    margin: 10px;
+    width: 300px;
+}
