@@ -1,0 +1,23 @@
+.label{
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+}
+
+.inputveld{
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+}
+
+#buttonGeneerTekst{
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+}
+
+#inputResultaat{
+    display: inline-block;
+    margin: 10px;
+    width: 250px;
+}
