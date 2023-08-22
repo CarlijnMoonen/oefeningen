@@ -1,0 +1,23 @@
+.labels9{
+    display: inline-block;
+    margin: 10px;
+    width: 50px;
+}
+
+.inputvelden9{
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+}
+
+#buttonGo{
+    display: inline-block;
+    margin: 10px;
+    width: 50px;
+}
+
+#labelGefilterd{
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+}
