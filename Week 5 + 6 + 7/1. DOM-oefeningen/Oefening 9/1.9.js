@@ -57,10 +57,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
     buttonGo.addEventListener("click", updateOutput);
 
-    function updateOutput(){
+    function updateOutput() {
         const inputTekst = inputZin.value;
         const filterTekst = inputFilter.value.toLowerCase();
 
+        const woorden = inputTekst.split(" ").reverse();
 
+        labelGefilterd.innerHTML = "";
+
+        let gefilterd = 0;
+
+        woorden.forEach(function (woord) {
+            if (filterTekst && woord.toLowerCase().includes(filterTekst)) {
+                gefilterd++;
+            } else {
+                const woordElement = document.createElement("span");
+                woordElement.textContent = woord;
+                woordElement.id = "woordElement";
+                labelGefilterd.appendChild(woordElement);
+            }
+        });
+
+        if (filterTekst){
+            const gefilterdElement = document.createElement("p");
+            gefilterdElement.textContent = gefilterd + " word(s) filtered.";
+            labelGefilterd.appendChild(gefilterdElement);
+        }
+        else {
+            const geenFilterElement = document.createElement("p");
+            geenFilterElement.textContent = "0 word(s) filtered."
+            labelGefilterd.appendChild(geenFilterElement);
+        }
+
+
+        // gefilterd.forEach(function (woord){
+        //     const woordElement = document.createElement("span");
+        //     woordElement.textContent = woord;
+        //     woordElement.id = "woordElement";
+        //     labelGefilterd.appendChild(woordElement);
+        // });
+        //
+        // const gefilterdCount = woorden.length - gefilterd.length;
+        // const gefilterdElement = document.createElement("p");
+        // gefilterdElement.textContent = gefilterdCount + "word(s) filtered.";
+        // labelGefilterd.appendChild(gefilterdElement);
     }
 });

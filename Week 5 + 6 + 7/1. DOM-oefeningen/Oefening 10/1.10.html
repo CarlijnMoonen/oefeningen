@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Oefening 10</title>
+    <link href="1.10.css" rel="stylesheet">
+    <script defer src="1.10.js"></script>
+</head>
+<body>
+
+<h3 id="titel">Persoonlijke gegevens</h3>
+
+<form id="myForm">
+    <label for="voornaam" id="labelVoornaam">Voornaam</label>
+    <input type="text" id="voornaam" value="voornaam" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this)">
+
+    <br>
+
+    <label for="naam" id="labelNaam">Achternaam</label>
+    <input type="text" id="naam" value="naam" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this)">
+
+    <br>
+
+    <label for="adres" id="labelAdres">Adres</label
+    ><input type="text" id="adres" value="adres" onfocus="clearPlaceholder(this)" onblur="resetPlaceholder(this)">
+
+    <br>
+
+    <button type="button" onclick="verzenden()">Verzenden</button>
+    <button type="button" onclick="wissen()">Wissen</button>
+</form>
+
+</body>
+</html>

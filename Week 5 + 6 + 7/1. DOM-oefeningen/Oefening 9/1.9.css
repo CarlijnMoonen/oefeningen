@@ -16,8 +16,15 @@
     width: 50px;
 }
 
+#woordElement{
+    background: red;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+}
+
 #labelGefilterd{
     display: inline-block;
     margin: 10px;
-    width: 150px;
+    width: 300px;
 }
