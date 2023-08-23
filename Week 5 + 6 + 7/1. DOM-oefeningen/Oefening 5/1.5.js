@@ -103,9 +103,16 @@ document.addEventListener("DOMContentLoaded", function () {
         let email = document.getElementById("inputEmail");
         let emailAdres = email.value;
 
-        if (!emailAdres.includes("@")) {
-            labelControle.innerText = "Ongeldige invoer! Mist een '@'";
-            return;
+        // if (!emailAdres.includes("@")) {
+        //     labelControle.innerText = "Ongeldige invoer! Mist een '@'";
+        //     return;
+        // }
+
+        if (!emailAdres.includes("@")){
+            const foutmelding = "Ongeldige invoer! Mist een '@'";
+            const textNode = document.createTextNode(foutmelding);
+            labelControle.appendChild(textNode);
+            return foutmelding;
         }
 
         let delen = emailAdres.split("@");
@@ -113,18 +120,30 @@ document.addEventListener("DOMContentLoaded", function () {
         let domeinenDeel = delen[1];
 
         namenDeel = namenDeel.split(".");
-        if (namenDeel.length !== 2) { //controleren of het gedeelde uit 2 namen/onderdelen bestaat
-            labelControle.innerText = "Ongeldige invoer!";
-            return;
+        if (namenDeel.length !== 2) { //controleren of het gedeelde uit 2 namen/onderdelen bestaat -> zo niet, foutmelding
+            const foutmeldingNamen = "Ongeldige invoer!";
+            labelControle.removeChild(labelControle.firstChild);
+            //clearLabelControle();
+            const textNodeNamen = document.createTextNode(foutmeldingNamen);
+            labelControle.appendChild(textNodeNamen);
+            return foutmeldingNamen;
         }
+
+        // function clearLabelControle(){
+        //     while (labelControle.firstChild) {
+        //         labelControle.removeChild(labelControle.firstChild);
+        //     }
+        // }
+
         let naam = namenDeel[0];
         let naam2 = namenDeel[1];
 
         domeinenDeel = domeinenDeel.split(".");
-        if (domeinenDeel.length !== 2) { //controleren of het gedeelde uit 2 namen/onderdelen bestaat
+        if (domeinenDeel.length !== 2) { //controleren of het gedeelde uit 2 namen/onderdelen bestaat -> zo niet, foutmelding
             labelControle.innerText = "Ongeldige invoer!";
             return;
         }
+
         let subdomein = domeinenDeel[0];
         let domein = domeinenDeel[1];
 
